@@ -1,6 +1,7 @@
 require 'yaml/store'
 require_relative 'task'
 
+
 class TaskManager
   def self.database
     @database ||= YAML::Store.new("db/task_manager")
@@ -31,6 +32,20 @@ class TaskManager
 
   def self.find(id)
     Task.new(raw_task(id))
+  end
+
+  def self.update(id, data)
+    database.transaction do
+      target = database['tasks'].find { |task| task["id"] == id }
+      target["title"] = data[:title]
+      target["description"] = data[:description]
+    end
+  end
+
+  def self.delete(id)
+    database.transaction do
+      target = database['tasks'].delete_if { |task| task["id"] == id }
+    end
   end
 
 end

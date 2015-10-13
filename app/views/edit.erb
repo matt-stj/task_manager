@@ -1,0 +1,14 @@
+<h2>Edit Task</h2>
+<div class="input-group">
+  <form action="/tasks/<%= @task.id %>" method="POST">
+    <label for="basic-url">Title:</label>
+    <div class="input-group">
+    <input type="hidden" name="_method" value="PUT" />
+
+    <input type="text" class="form-control" id="basic-url" placeholder="Title: <%= @task.title %>" aria-describedby="basic-addon3" name='task[title]'>
+    <label for="description">Description:</label>
+    <textarea class="form-control" rows="5" id="description" placeholder="Description:<%= @task.description %>" name='task[description]'></textarea>
+    </div>
+    <input class="btn btn-success" type='submit'/>
+  </form>
+</div>

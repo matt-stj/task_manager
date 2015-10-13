@@ -1,15 +1,9 @@
 ---
 tasks:
-- id: 1
-  title: task
-  description: "descr\r\n"
-- id: 2
-  title: task2
-  description: "desc2\r\n"
-- id: 3
-  title: task 3
-  description: this is the 3rd task.
-- id: 4
-  title: Task 4
-  description: This is the fourth task.
-total: 4
+- id: 6
+  title: Hi (new form)
+  description: desc new form
+- id: 7
+  title: New Task
+  description: Description
+total: 7

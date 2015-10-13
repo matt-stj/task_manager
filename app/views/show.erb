@@ -1,5 +1,8 @@
-<a href="/tasks">Task Index</a>
+<a href="/tasks"><span class="glyphicon glyphicon-arrow-left"</span>Task Index</a>
 
-<h1><%= @task.title %></h1>
-
-<p><%= @task.description %></p>
+<div class="panel panel-default" style="margin-top: 20px;">
+  <div class="panel-heading"><h1><%= @task.title %></h1></div>
+  <div class="panel-body">
+    <p><%= @task.description %></p>
+  </div>
+</div>
